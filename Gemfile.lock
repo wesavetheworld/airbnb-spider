@@ -3,6 +3,7 @@ GEM
   specs:
     atomic (1.1.14)
     mini_portile (0.5.1)
+    mixpanel-ruby (1.0.2)
     nokogiri (1.6.0)
       mini_portile (~> 0.5.0)
     rufus-scheduler (2.0.24)
@@ -16,5 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  mixpanel-ruby
   nokogiri
   rufus-scheduler
