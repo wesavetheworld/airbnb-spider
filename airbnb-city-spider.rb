@@ -20,7 +20,7 @@ module AirBnb
     begin
       uri = URI(url)
       result = {}
-      $tracker.track($host, 'HTTP Request')  
+#      $tracker.track($host, 'HTTP Request')  
       Net::HTTP.start(uri.host,uri.port,:use_ssl => uri.scheme == 'https') do |http|
         request = Net::HTTP::Get.new uri
         request["Cookie"] = "_user_attributes=#{URI::escape('{"curr":"usd"}')}"
@@ -31,7 +31,7 @@ module AirBnb
         result["response"] = response.each do |x| end
         result["body"] = response.body
       end
-      $tracker.track($host, 'HTTP Request Done')  
+#      $tracker.track($host, 'HTTP Request Done')  
       sleep(2);
     rescue StandardError => e
       $logger.info ("HTTPBot") { e.to_s }
@@ -80,7 +80,7 @@ class CitySpider < Spider
     city_hotel_list = []
     
     while read_count < count do
-      $tracker.track($host, 'City Spider Traverse Page')  
+#      $tracker.track($host, 'City Spider Traverse Page')  
       url = "https://www.airbnb.com/search/search_results?location=#{AirBnb::url_name(city)}"
       url = url + "&price_min=#{price_min}" if price_min
       url = url + "&price_max=#{price_max}" if price_max
