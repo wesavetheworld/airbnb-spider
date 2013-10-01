@@ -10,7 +10,7 @@ $logger = Logger.new("airbnb-scheduler.log","weekly")
 
 scheduler = Rufus::Scheduler.new
 
-scheduler.cron '5 0 * * *' do
+scheduler.cron '40 12 * * * UTC ' do
   $logger.info ("Scheduler") { "Start City Spider" }
   puts "Start City Spider"
 
