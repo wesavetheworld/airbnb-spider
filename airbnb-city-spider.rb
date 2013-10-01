@@ -227,12 +227,12 @@ end
 
 time = Time.now
 $logger.info ("CitySpider") {"Start"}
-puts "CitySpider - Start"
+#puts "CitySpider - Start"
 
 run_city_spider
 
 $logger.info ("CitySpider") {"End"}
-puts "CitySpider - End"
+#puts "CitySpider - End"
 $logger.info ("CitySpider") {"Time: #{Time.now-time}"}
-puts "CitySpider - Time: #{Time.now-time}"
+#puts "CitySpider - Time: #{Time.now-time}"
 
