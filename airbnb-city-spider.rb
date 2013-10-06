@@ -130,7 +130,13 @@ class CitySpider < Spider
      data = JSON.parse(res["body"])
  
      if not city_data[city] then
-       city_data[city] = {"center_lat"=>data["center_lat"],"center_lng"=>data["center_lng"]}
+       city_data[city] = {"center_lat"=>data["center_lat"],"center_lng"=>data["center_lng"]}       
+     end
+     
+     if city_data[city]["center_lat"]==0.0 and city_data[city]["center_lng"]==0.0 then
+       $logger.error ("AAntiSpider") { "fetch_city_price - city=#{city}, center_lat=#{city_data[city]["center_lat"]}, center_lng=#{city_data[city]["center_lng"]}"}
+       puts "AAntiSpider - fetch_city_price - city=#{city}, center_lat=#{city_data[city]["center_lat"]}, center_lng=#{city_data[city]["center_lng"]}"
+       return
      end
  
      if (data["visible_results_count"]<1000 or price_min==price_max) then

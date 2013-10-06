@@ -1,6 +1,7 @@
 # SortBy[Select[CityData[], CityData[#, "Population"]  > 1000000 &], CityData[#, "Population"] &]
 # CityData[#, "Name"] & /@ %
 ---
+- al-Basrah
 - Konya
 - Danzhou
 - Odesa
@@ -94,7 +95,6 @@
 - Rosario
 - Saitama
 - Ghaziabad
-- al-Basrah
 - Jiangyin
 - Lujiang
 - Dingzhou
