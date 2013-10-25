@@ -6,7 +6,7 @@ require 'socket'
 
 $host = Socket.gethostname
 $tracker = Mixpanel::Tracker.new("4b8a200b7b7af5992a6db04e53e94f5d")
-$logger = Logger.new("airbnb-scheduler.log","weekly")
+$logger = Logger.new("airbnb-scheduler.log")
 
 scheduler = Rufus::Scheduler.new
 

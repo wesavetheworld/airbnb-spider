@@ -39,9 +39,9 @@ module AirBnb
       raise e
     end  
     
-    $logger.info ("HTTPBot") { "url: #{url}" }    
-    $logger.info ("HTTPBot") { "request: #{result["request"]}" }    
-    $logger.info ("HTTPBot") { "response: #{result["response"]}" }    
+#    $logger.info ("HTTPBot") { "url: #{url}" }    
+#    $logger.info ("HTTPBot") { "request: #{result["request"]}" }    
+#    $logger.info ("HTTPBot") { "response: #{result["response"]}" }    
     return result
   end
 end
